@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hairstylist_Blaze | Braids, Bridal Styles, Frontal Install & Training – Abule Egba, Lagos</title>
+<meta name="description" content="Premium hairstyling in Abule Egba & Ojokoro, Lagos. Braids, Bridal Styles, Cornrows, Frontal Installation, Dread Relocking & Hair Training. Rated 4.9 on Google. Book on WhatsApp today."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --pink:#e05c8a;
+  --pink2:#f07dab;
+  --pink3:#fce8f3;
+  --pink4:#fff0f7;
+  --rose:#c24474;
+  --cream:#fdf7f4;
+  --cream2:#f8ede8;
+  --text:#2a1520;
+  --text2:#6b3d52;
+  --muted:#a87a90;
+  --white:#ffffff;
+  --fd:'Cormorant Garamond',serif;
+  --fb:'Jost',sans-serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--fb);background:var(--cream);color:var(--text);-webkit-font-smoothing:antialiased;}
+::-webkit-scrollbar{width:5px;}
+::-webkit-scrollbar-track{background:var(--pink4);}
+::-webkit-scrollbar-thumb{background:var(--pink2);border-radius:10px;}
+
+/* NAV */
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:300;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 24px;height:66px;
+  background:rgba(253,247,244,0.93);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(224,92,138,0.12);
+  transition:box-shadow .3s;
+}
+.nav.scrolled{box-shadow:0 4px 28px rgba(224,92,138,0.1);}
+.nav-brand{display:flex;flex-direction:column;line-height:1.15;text-decoration:none;}
+.nav-name{font-family:var(--fd);font-size:1.3rem;font-weight:700;color:var(--text);}
+.nav-name span{color:var(--pink);}
+.nav-tag{font-size:.6rem;font-weight:500;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);}
+.nav-right{display:flex;align-items:center;gap:10px;}
+.nav-links{display:none;align-items:center;gap:28px;}
+.nav-links a{font-size:.8rem;font-weight:500;color:var(--text2);text-decoration:none;letter-spacing:.02em;transition:color .2s;position:relative;}
+.nav-links a::after{content:'';position:absolute;bottom:-3px;left:0;width:0;height:1.5px;background:var(--pink);border-radius:2px;transition:width .25s ease;}
+.nav-links a:hover{color:var(--pink);}
+.nav-links a:hover::after{width:100%;}
+@media(min-width:860px){.nav-links{display:flex;}}
+.nav-phone{display:none;font-size:.78rem;color:var(--text2);text-decoration:none;font-weight:500;}
+.nav-phone:hover{color:var(--pink);}
+.btn-nav{
+  display:inline-flex;align-items:center;gap:7px;
+  background:var(--pink);color:#fff;
+  font-family:var(--fb);font-size:.78rem;font-weight:600;letter-spacing:.03em;
+  padding:10px 20px;border-radius:100px;text-decoration:none;
+  box-shadow:0 4px 16px rgba(224,92,138,0.3);
+  transition:background .2s,transform .15s;
+}
+.btn-nav:hover{background:var(--rose);transform:translateY(-1px);}
+@media(min-width:600px){.nav-phone{display:block;} .nav{padding:0 48px;}}
+
+/* HERO */
+.hero{
+  position:relative;width:100%;height:100svh;min-height:600px;overflow:hidden;
+}
+.slides{position:absolute;inset:0;}
+.slide{
+  position:absolute;inset:0;
+  background-size:cover;background-position:center top;
+  opacity:0;transition:opacity 1.2s ease;
+  will-change:opacity;
+}
+.slide.active{opacity:1;}
+.hero-overlay{
+  position:absolute;inset:0;z-index:2;
+  background:linear-gradient(160deg,rgba(194,68,116,0.15) 0%,rgba(42,21,32,0.5) 50%,rgba(42,21,32,0.75) 100%);
+}
+.hero-content{
+  position:relative;z-index:10;
+  height:100%;display:flex;flex-direction:column;justify-content:flex-end;
+  padding:0 24px 60px;max-width:680px;
+}
+.hero-live{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.14);backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.22);border-radius:100px;
+  padding:6px 14px;margin-bottom:18px;width:fit-content;
+}
+.live-dot{width:7px;height:7px;background:#6bdc8f;border-radius:50%;animation:pulse-dot 2s infinite;}
+@keyframes pulse-dot{0%,100%{opacity:1;}50%{opacity:.35;}}
+.live-text{font-size:.7rem;font-weight:500;color:rgba(255,255,255,.9);letter-spacing:.07em;text-transform:uppercase;}
+.hero-eye{
+  font-size:.7rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--pink2);margin-bottom:12px;
+  display:flex;align-items:center;gap:10px;
+}
+.hero-eye::before{content:'';width:28px;height:1px;background:var(--pink2);display:block;}
+.hero h1{
+  font-family:var(--fd);
+  font-size:clamp(2.6rem,9vw,5.4rem);
+  font-weight:700;color:#fff;line-height:1.07;
+  margin-bottom:16px;
+}
+.hero h1 em{font-style:italic;color:var(--pink2);}
+.hero-sub{
+  font-size:.91rem;color:rgba(255,255,255,.7);font-weight:300;
+  max-width:400px;margin-bottom:30px;line-height:1.8;
+}
+.hero-sub b{color:rgba(255,255,255,.95);font-weight:500;}
+.hero-btns{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:34px;}
+.btn-hp{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--pink);color:#fff;
+  font-size:.84rem;font-weight:600;
+  padding:14px 28px;border-radius:100px;text-decoration:none;
+  box-shadow:0 6px 24px rgba(224,92,138,0.45);
+  transition:background .2s,transform .15s;
+}
+.btn-hp:hover{background:var(--rose);transform:translateY(-2px);}
+.btn-hs{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(255,255,255,0.12);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.28);
+  color:#fff;font-size:.84rem;font-weight:400;
+  padding:14px 28px;border-radius:100px;text-decoration:none;
+  transition:background .2s;
+}
+.btn-hs:hover{background:rgba(255,255,255,0.2);}
+.hero-trust{
+  display:flex;align-items:center;gap:14px;
+  border-top:1px solid rgba(255,255,255,.1);padding-top:22px;
+}
+.trust-stars{color:var(--pink2);font-size:.95rem;letter-spacing:3px;}
+.trust-label{font-size:.77rem;color:rgba(255,255,255,.5);line-height:1.45;}
+.trust-label b{color:rgba(255,255,255,.9);}
+/* Slide controls */
+.slide-count{
+  position:absolute;top:82px;right:22px;z-index:20;
+  font-size:.7rem;font-weight:500;letter-spacing:.1em;color:rgba(255,255,255,.5);
+}
+.slide-count b{color:#fff;font-weight:600;}
+.slide-arrows{position:absolute;bottom:60px;right:22px;z-index:20;display:flex;gap:8px;}
+.sarrow{
+  width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,0.14);backdrop-filter:blur(8px);
+  border:1px solid rgba(255,255,255,0.22);
+  color:#fff;font-size:1rem;cursor:pointer;
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s;
+}
+.sarrow:hover{background:rgba(255,255,255,0.28);}
+.slide-dots{position:absolute;bottom:30px;left:24px;z-index:20;display:flex;gap:6px;}
+.sdot{
+  width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.35);
+  border:none;cursor:pointer;padding:0;transition:background .3s,transform .3s;
+}
+.sdot.on{background:#fff;transform:scale(1.3);}
+
+/* SECTIONS */
+section{padding:80px 24px;}
+@media(min-width:600px){section{padding:96px 48px;}}
+.wrap{max-width:1100px;margin:0 auto;}
+.sl{font-size:.68rem;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:var(--pink);margin-bottom:8px;}
+.st{font-family:var(--fd);font-size:clamp(1.85rem,5vw,3rem);font-weight:700;color:var(--text);line-height:1.12;margin-bottom:10px;}
+.ss{font-size:.89rem;color:var(--muted);font-weight:300;max-width:460px;line-height:1.8;}
+.bar{width:44px;height:3px;background:linear-gradient(90deg,var(--pink),var(--pink2));border-radius:10px;margin:12px 0 14px;}
+.sh{margin-bottom:50px;}
+
+/* SERVICES */
+#services{background:var(--white);}
+.sgrid{display:grid;grid-template-columns:1fr;gap:18px;}
+@media(min-width:600px){.sgrid{grid-template-columns:1fr 1fr;}}
+@media(min-width:960px){.sgrid{grid-template-columns:repeat(3,1fr);}}
+/* SERVICE CARD IMAGE */
+.sc-img{width:100%;height:175px;border-radius:10px;overflow:hidden;margin-bottom:14px;position:relative;}
+.sc-img img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .55s cubic-bezier(.22,1,.36,1);}
+.sc:hover .sc-img img{transform:scale(1.08);}
+.sc-img-badge{
+  position:absolute;top:9px;left:9px;
+  background:rgba(224,92,138,0.85);backdrop-filter:blur(6px);
+  color:#fff;font-size:.63rem;font-weight:600;letter-spacing:.09em;text-transform:uppercase;
+  padding:4px 11px;border-radius:100px;
+}
+.sc{
+  background:var(--cream);border:1px solid rgba(224,92,138,0.1);
+  border-radius:16px;padding:26px 22px;
+  display:flex;flex-direction:column;gap:6px;
+  position:relative;overflow:hidden;
+  transition:transform .22s,box-shadow .22s,border-color .22s;
+}
+.sc::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg,var(--pink),var(--pink2));
+  opacity:0;transition:opacity .25s;
+}
+.sc:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(224,92,138,0.13);border-color:rgba(224,92,138,0.22);}
+.sc:hover::after{opacity:1;}
+.sc-icon{font-size:1.9rem;margin-bottom:6px;}
+.sc-name{font-family:var(--fd);font-size:1.22rem;font-weight:700;color:var(--text);}
+.sc-desc{font-size:.83rem;color:var(--text2);font-weight:300;line-height:1.75;flex:1;}
+.sc-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:16px;padding-top:16px;border-top:1px solid rgba(224,92,138,0.1);
+}
+.sc-price{font-size:.79rem;color:var(--muted);}
+.sc-price b{font-family:var(--fd);font-size:1.12rem;color:var(--pink);font-weight:700;}
+.bbtn{
+  display:inline-block;background:var(--text);color:#fff;
+  font-size:.73rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  padding:9px 17px;border-radius:100px;text-decoration:none;
+  transition:background .2s;
+}
+.bbtn:hover{background:var(--pink);}
+
+/* WHY */
+#why{background:var(--pink4);}
+.why-wrap{display:grid;grid-template-columns:1fr;gap:24px;}
+@media(min-width:960px){.why-wrap{grid-template-columns:260px 1fr;}}
+.why-star{
+  background:linear-gradient(150deg,var(--pink) 0%,var(--rose) 100%);
+  border-radius:20px;padding:40px 28px;text-align:center;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;
+}
+.ws-num{font-family:var(--fd);font-size:5.5rem;font-weight:700;color:#fff;line-height:1;}
+.ws-stars{font-size:1.25rem;letter-spacing:4px;color:rgba(255,255,255,.8);}
+.ws-label{font-size:.8rem;color:rgba(255,255,255,.7);line-height:1.55;}
+.wgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+.wc{
+  background:#fff;border-radius:14px;padding:20px 16px;
+  border:1px solid rgba(224,92,138,0.08);
+  transition:box-shadow .2s;
+}
+.wc:hover{box-shadow:0 6px 24px rgba(224,92,138,0.1);}
+.wc-icon{font-size:1.5rem;margin-bottom:8px;}
+.wc-t{font-family:var(--fd);font-size:.98rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+.wc-d{font-size:.77rem;color:var(--muted);font-weight:300;line-height:1.65;}
+
+/* GALLERY */
+#gallery{background:var(--cream);}
+.gg{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:6px;
+  border-radius:18px;overflow:hidden;
+}
+@media(min-width:960px){
+  .gg{grid-template-columns:repeat(3,1fr);}
+  .gi:nth-child(1){grid-column:1/3;}
+}
+.gi{position:relative;overflow:hidden;background:var(--pink3);cursor:pointer;}
+.gi:nth-child(1){grid-column:1/-1;height:220px;}
+.gi:nth-child(2),.gi:nth-child(3){height:180px;}
+.gi:nth-child(4),.gi:nth-child(5),.gi:nth-child(6){height:160px;}
+@media(min-width:600px){
+  .gi:nth-child(1){height:300px;}
+  .gi:nth-child(2),.gi:nth-child(3){height:220px;}
+  .gi:nth-child(4),.gi:nth-child(5),.gi:nth-child(6){height:190px;}
+}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease;}
+.gi:hover img{transform:scale(1.07);}
+.gi-ov{
+  position:absolute;inset:0;
+  background:linear-gradient(to top,rgba(224,92,138,.7) 0%,transparent 55%);
+  opacity:0;transition:opacity .3s;
+  display:flex;align-items:flex-end;padding:14px;
+}
+.gi:hover .gi-ov{opacity:1;}
+.gi-lbl{font-family:var(--fd);font-size:.95rem;color:#fff;font-style:italic;}
+.gal-note{text-align:center;margin-top:18px;font-size:.8rem;color:var(--muted);}
+.gal-note a{color:var(--pink);text-decoration:none;font-weight:500;}
+
+/* TESTIMONIALS */
+#testimonials{background:var(--white);}
+.tgrid{display:grid;grid-template-columns:1fr;gap:18px;}
+@media(min-width:600px){.tgrid{grid-template-columns:1fr 1fr;}}
+@media(min-width:960px){.tgrid{grid-template-columns:repeat(3,1fr);}}
+.tc{
+  background:var(--cream);border:1px solid rgba(224,92,138,0.1);
+  border-radius:16px;padding:26px 22px;position:relative;
+  transition:box-shadow .22s;
+}
+.tc:hover{box-shadow:0 8px 30px rgba(224,92,138,0.1);}
+.tc-q{
+  font-family:var(--fd);font-size:4.5rem;line-height:1;
+  color:var(--pink);opacity:.18;
+  position:absolute;top:12px;left:18px;pointer-events:none;
+}
+.tc-txt{font-size:.87rem;color:var(--text);font-weight:300;line-height:1.82;margin-bottom:20px;padding-top:6px;}
+.tc-foot{display:flex;align-items:center;gap:11px;}
+.tc-av{
+  width:40px;height:40px;border-radius:50%;flex-shrink:0;
+  background:linear-gradient(135deg,var(--pink),var(--pink2));
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--fd);font-size:1.1rem;font-weight:700;color:#fff;
+}
+.tc-name{font-size:.84rem;font-weight:600;color:var(--text);}
+.tc-loc{font-size:.73rem;color:var(--muted);}
+.tc-stars{margin-left:auto;color:var(--pink);font-size:.82rem;letter-spacing:2px;}
+
+/* LOCATION */
+#location{background:var(--pink4);}
+.loc-grid{display:grid;grid-template-columns:1fr;gap:28px;}
+@media(min-width:700px){.loc-grid{grid-template-columns:1fr 1fr;align-items:start;}}
+.loc-map{
+  border-radius:16px;aspect-ratio:16/9;overflow:hidden;
+  background:linear-gradient(135deg,var(--pink3),var(--cream2));
+  border:1px solid rgba(224,92,138,0.15);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--muted);gap:10px;
+}
+.loc-map span{font-size:2.8rem;}
+.loc-map p{font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;}
+.loc-map small{font-size:.7rem;color:var(--pink2);}
+.litems{display:flex;flex-direction:column;gap:16px;}
+.li{display:flex;align-items:flex-start;gap:13px;}
+.li-icon{
+  width:42px;height:42px;border-radius:11px;flex-shrink:0;
+  background:#fff;border:1px solid rgba(224,92,138,0.12);
+  display:flex;align-items:center;justify-content:center;font-size:1.05rem;
+}
+.li-label{font-size:.66rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:2px;}
+.li-val{font-size:.89rem;color:var(--text);line-height:1.55;}
+.li-val a{color:var(--pink);text-decoration:none;font-weight:500;}
+.seo-area{
+  margin-top:18px;padding:15px 18px;
+  background:rgba(255,255,255,0.65);border-radius:12px;
+  border:1px solid rgba(224,92,138,0.1);
+  font-size:.79rem;color:var(--muted);line-height:1.8;
+}
+.seo-area b{color:var(--text2);}
+
+/* CTA */
+#cta{
+  background:linear-gradient(140deg,var(--pink) 0%,var(--rose) 100%);
+  text-align:center;padding:90px 24px;position:relative;overflow:hidden;
+}
+#cta::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 70% 70% at 50% 0%,rgba(255,255,255,0.13) 0%,transparent 60%);
+}
+#cta::after{
+  content:'';position:absolute;bottom:-80px;right:-80px;
+  width:280px;height:280px;border-radius:50%;background:rgba(255,255,255,0.05);
+}
+.cta-in{position:relative;z-index:2;}
+.cta-badge{
+  display:inline-block;
+  background:rgba(255,255,255,0.18);border:1px solid rgba(255,255,255,0.28);
+  border-radius:100px;padding:6px 16px;
+  font-size:.68rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.9);margin-bottom:22px;
+}
+#cta .st{color:#fff;margin-bottom:12px;}
+.cta-sub{font-size:.89rem;color:rgba(255,255,255,.72);max-width:370px;margin:0 auto 34px;font-weight:300;line-height:1.8;}
+.cta-btns{display:flex;flex-direction:column;align-items:center;gap:11px;}
+@media(min-width:500px){.cta-btns{flex-direction:row;justify-content:center;}}
+.btn-cm{
+  display:inline-flex;align-items:center;gap:9px;
+  background:#fff;color:var(--rose);
+  font-size:.87rem;font-weight:700;
+  padding:15px 34px;border-radius:100px;text-decoration:none;
+  box-shadow:0 6px 28px rgba(0,0,0,0.15);
+  transition:transform .2s,box-shadow .2s;
+}
+.btn-cm:hover{transform:translateY(-2px);box-shadow:0 10px 36px rgba(0,0,0,0.2);}
+.btn-cs{
+  display:inline-flex;align-items:center;gap:7px;
+  background:transparent;color:rgba(255,255,255,.85);
+  border:1px solid rgba(255,255,255,.32);
+  font-size:.81rem;font-weight:500;
+  padding:13px 26px;border-radius:100px;text-decoration:none;
+  transition:background .2s;
+}
+.btn-cs:hover{background:rgba(255,255,255,.12);}
+.cta-phone{margin-top:20px;font-size:.77rem;color:rgba(255,255,255,.4);}
+.cta-phone a{color:rgba(255,255,255,.8);text-decoration:none;}
+
+/* FOOTER */
+footer{background:var(--text);padding:36px 24px;text-align:center;}
+.f-brand{font-family:var(--fd);font-size:1.2rem;font-weight:700;color:#fff;margin-bottom:5px;}
+.f-brand span{color:var(--pink2);}
+.f-tag{font-size:.67rem;color:rgba(255,255,255,.28);letter-spacing:.12em;text-transform:uppercase;margin-bottom:14px;}
+.f-links{display:flex;justify-content:center;gap:20px;margin-bottom:14px;flex-wrap:wrap;}
+.f-links a{font-size:.77rem;color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s;}
+.f-links a:hover{color:var(--pink2);}
+.f-copy{font-size:.68rem;color:rgba(255,255,255,.18);}
+
+/* WHATSAPP FAB */
+.wa-fab{
+  position:fixed;bottom:22px;right:18px;z-index:500;
+  width:56px;height:56px;border-radius:50%;background:#25d366;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 4px 22px rgba(37,211,102,0.45);
+  text-decoration:none;
+  animation:fab-pop .5s .8s both;
+  transition:transform .2s,box-shadow .2s;
+}
+@keyframes fab-pop{from{transform:scale(0);}to{transform:scale(1);}}
+.wa-fab:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(37,211,102,0.5);}
+.wa-fab svg{width:30px;height:30px;fill:#fff;}
+.wa-ring{
+  position:absolute;inset:-5px;border-radius:50%;
+  border:2px solid rgba(37,211,102,0.45);
+  animation:wa-ring 2s ease infinite;
+}
+@keyframes wa-ring{0%{transform:scale(1);opacity:.8;}100%{transform:scale(1.55);opacity:0;}}
+
+/* FADE UP ANIM */
+.fu{opacity:0;transform:translateY(26px);transition:opacity .65s cubic-bezier(.22,1,.36,1),transform .65s cubic-bezier(.22,1,.36,1);}
+.fu.vis{opacity:1;transform:translateY(0);}
+.fu:nth-child(2){transition-delay:.1s;}
+.fu:nth-child(3){transition-delay:.2s;}
+.fu:nth-child(4){transition-delay:.3s;}
+.fu:nth-child(5){transition-delay:.4s;}
+.fu:nth-child(6){transition-delay:.5s;}
+
+/* HERO CONTENT ENTRANCE */
+@keyframes hero-slide-up{
+  from{opacity:0;transform:translateY(38px);}
+  to{opacity:1;transform:translateY(0);}
+}
+@keyframes hero-fade-in{
+  from{opacity:0;}to{opacity:1;}
+}
+.hero-live{animation:hero-slide-up .7s .3s cubic-bezier(.22,1,.36,1) both;}
+.hero-eye{animation:hero-slide-up .7s .45s cubic-bezier(.22,1,.36,1) both;}
+.hero h1{animation:hero-slide-up .8s .55s cubic-bezier(.22,1,.36,1) both;}
+.hero-sub{animation:hero-slide-up .7s .7s cubic-bezier(.22,1,.36,1) both;}
+.hero-btns{animation:hero-slide-up .7s .82s cubic-bezier(.22,1,.36,1) both;}
+.hero-trust{animation:hero-fade-in .8s 1s both;}
+
+/* FLOATING PETALS */
+.petals{position:absolute;inset:0;z-index:3;pointer-events:none;overflow:hidden;}
+.petal{
+  position:absolute;top:-60px;
+  width:18px;height:18px;
+  background:rgba(240,125,171,0.35);
+  border-radius:50% 0 50% 0;
+  animation:petal-fall linear infinite;
+  filter:blur(0.5px);
+}
+@keyframes petal-fall{
+  0%{transform:translateY(0) rotate(0deg) scale(1);opacity:.8;}
+  80%{opacity:.5;}
+  100%{transform:translateY(110vh) rotate(480deg) scale(.6);opacity:0;}
+}
+
+/* SHIMMER ON SECTION HEADERS */
+@keyframes shimmer-bar{
+  0%{background-position:-200% center;}
+  100%{background-position:200% center;}
+}
+.bar{
+  background:linear-gradient(90deg,var(--pink),var(--pink2),var(--pink),var(--pink2));
+  background-size:200% auto;
+  animation:shimmer-bar 2.5s linear infinite;
+}
+
+/* SERVICE CARD HOVER LIFT */
+.sc{transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,border-color .3s ease;}
+.sc:hover{transform:translateY(-8px) scale(1.015);}
+
+/* WHY CARDS HOVER */
+.wc{transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease;}
+.wc:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 12px 32px rgba(224,92,138,0.14);}
+
+/* TESTIMONIAL CARD HOVER */
+.tc{transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease;}
+.tc:hover{transform:translateY(-5px);box-shadow:0 14px 40px rgba(224,92,138,0.12);}
+
+/* RATING NUMBER COUNT-UP PULSE */
+@keyframes rating-pulse{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.06);}
+}
+.ws-num{animation:rating-pulse 3s ease-in-out infinite;}
+
+/* NAV BRAND ENTRANCE */
+@keyframes nav-drop{
+  from{opacity:0;transform:translateY(-18px);}
+  to{opacity:1;transform:translateY(0);}
+}
+.nav{animation:nav-drop .5s .1s cubic-bezier(.22,1,.36,1) both;}
+
+/* SLIDE ARROWS BOUNCE HINT */
+@keyframes arrow-hint{
+  0%,100%{transform:translateX(0);}
+  50%{transform:translateX(4px);}
+}
+#next{animation:arrow-hint 2s 2.5s ease-in-out 3;}
+
+/* CTA BADGE FLOAT */
+@keyframes badge-float{
+  0%,100%{transform:translateY(0);}
+  50%{transform:translateY(-5px);}
+}
+.cta-badge{animation:badge-float 3s ease-in-out infinite;}
+
+/* SCROLL INDICATOR */
+@keyframes scroll-bounce{
+  0%,100%{transform:translateX(-50%) translateY(0);opacity:.6;}
+  50%{transform:translateX(-50%) translateY(8px);opacity:1;}
+}
+.scroll-hint{
+  position:absolute;bottom:18px;left:50%;transform:translateX(-50%);
+  z-index:20;display:flex;flex-direction:column;align-items:center;gap:5px;
+  animation:scroll-bounce 2s ease-in-out infinite;
+  opacity:.6;transition:opacity .4s ease;
+}
+.scroll-hint span{font-size:.6rem;color:rgba(255,255,255,.55);letter-spacing:.12em;text-transform:uppercase;}
+.scroll-arrow{width:20px;height:20px;border-right:2px solid rgba(255,255,255,.4);border-bottom:2px solid rgba(255,255,255,.4);transform:rotate(45deg);}
+
+/* GALLERY IMAGE ZOOM */
+.gi img{transition:transform .7s cubic-bezier(.22,1,.36,1);}
+.gi:hover img{transform:scale(1.1);}
+
+/* BOOK BUTTON PULSE GLOW */
+@keyframes btn-glow{
+  0%,100%{box-shadow:0 6px 24px rgba(224,92,138,0.45);}
+  50%{box-shadow:0 6px 38px rgba(224,92,138,0.75),0 0 0 6px rgba(224,92,138,0.1);}
+}
+.btn-hp{animation:btn-glow 2.5s ease-in-out infinite;}
+
+/* SECTION FADE-IN FROM SIDE */
+@keyframes slide-in-left{
+  from{opacity:0;transform:translateX(-30px);}
+  to{opacity:1;transform:translateX(0);}
+}
+@keyframes slide-in-right{
+  from{opacity:0;transform:translateX(30px);}
+  to{opacity:1;transform:translateX(0);}
+}
+.sh.vis .sl{animation:slide-in-left .5s ease both;}
+.sh.vis .st{animation:slide-in-left .55s .08s ease both;}
+.sh.vis .ss{animation:slide-in-left .55s .16s ease both;}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav-brand" href="#">
+    <span class="nav-name">Hairstylist<span>_Blaze</span></span>
+  </a>
+  <div class="nav-links">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#location">Location</a>
+  </div>
+  <div class="nav-right">
+    <a class="nav-phone" href="tel:0813412076">+234 813 412 2076</a>
+    <a class="btn-nav" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.12 1.523 5.847L.057 23.857c-.068.263.156.504.421.421l6.01-1.466A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.016-1.378l-.36-.213-3.726.908.929-3.622-.234-.374A9.818 9.818 0 0112 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.421-4.398 9.818-9.818 9.818z"/></svg>
+      Book Now
+    </a>
+  </div>
+</nav>
+
+<!-- HERO SLIDESHOW -->
+<div class="hero" id="home">
+  <div class="slides" id="slides">
+    <div class="slide active" style="background-image:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=1400&q=80&fit=crop&crop=top')"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1600948836101-f9ffda59d250?w=1400&q=80&fit=crop')"></div>
+    <div class="slide" style="background-image:url(images/Classy+Sassy\ ✨.jpg); background-position:center center;"></div>
+    <div class="slide" style="background-image:url(images/Dreads.jpg); background-position:center center;"></div>
+    <div class="slide" style="background-image:url('https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=1400&q=80&fit=crop&crop=top')"></div>
+    <div class="slide" style="background-image:url('https://i.pinimg.com/1200x/09/0b/ed/090bedad79821fdb84ab0c94a06b3acd.jpg'); background-position:center center;"></div>
+  </div>
+  <div class="hero-overlay"></div>
+
+  <!-- Floating petals -->
+  <div class="petals" id="petals"></div>
+
+  <div class="slide-count"><b id="sc">01</b> / 06</div>
+
+  <div class="hero-content">
+    <div class="hero-live">
+      <div class="live-dot"></div>
+      <span class="live-text">Now Booking · Abule Egba, Lagos</span>
+    </div>
+    <p class="hero-eye">Professional Hairstylist</p>
+    <h1>Your Hair,<br/><em>Perfectly Done.</em></h1>
+    <p class="hero-sub">Braids, bridal styles, frontal installs, cornrows, dread relocking &amp; training  done with <b>precision, care</b> and the finishing you deserve.</p>
+    <div class="hero-btns">
+      <a class="btn-hp" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20an%20appointment" target="_blank">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.12 1.523 5.847L.057 23.857c-.068.263.156.504.421.421l6.01-1.466A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.016-1.378l-.36-.213-3.726.908.929-3.622-.234-.374A9.818 9.818 0 0112 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.421-4.398 9.818-9.818 9.818z"/></svg>
+        Book on WhatsApp
+      </a>
+      <a class="btn-hs" href="#services">View Services ↓</a>
+    </div>
+    <div class="hero-trust">
+      <div class="trust-stars">★★★★★</div>
+      <div class="trust-label"><b>4.9 / 5</b> on Google Reviews<br/>Trusted by hundreds of people</div>
+    </div>
+  </div>
+
+  <div class="slide-arrows">
+    <button class="sarrow" id="prev" aria-label="Previous">&#8592;</button>
+    <button class="sarrow" id="next" aria-label="Next">&#8594;</button>
+  </div>
+  <div class="slide-dots" id="dots"></div>
+  
+</div>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="sh">
+      <p class="sl">What We Offer</p>
+      <h2 class="st">Our Services</h2>
+      <div class="bar"></div>
+      <p class="ss">Braids · Bridal Styles · Cornrows · Frontal Installs · Dread Relocking · Training all done with precision and love.</p>
+    </div>
+    <div class="sgrid">
+      <div class="sc fu">
+        <div class="sc-img">
+          <img src="https://i.pinimg.com/1200x/08/91/c5/0891c59c01a8cb1f43f7d9119d11c487.jpg" alt="Braids"/>
+          <span class="sc-img-badge">🌸 Braids</span>
+        </div>
+        <div class="sc-icon">🌸</div>
+        <div class="sc-name">Braids</div>
+        <div class="sc-desc">From knotless to box braids — lightweight, tension-free, and built to last. Every braid is parted cleanly and finished beautifully for a look that lasts weeks.</div>
+        <div class="sc-foot">
+          <div class="sc-price">From <b>₦15,000</b></div>
+          <a class="bbtn" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20Braids" target="_blank">Book Now</a>
+        </div>
+      </div>
+      <div class="sc fu">
+        <div class="sc-img">
+          <img src="images/Classy+Sassy ✨.jpg" alt="Bridal Hairstyle"/>
+          <span class="sc-img-badge">💍 Bridal</span>
+        </div>
+        <div class="sc-icon">💍</div>
+        <div class="sc-name">Bridal & Birthday Hairstyle</div>
+        <div class="sc-desc">Look stunning on your most important day. Elegant updos, flawless styles and polished finishes crafted for brides, birthday queens, and special occasions.</div>
+        <div class="sc-foot">
+          <div class="sc-price">From <b>₦50,000</b></div>
+          <a class="bbtn" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20a%20Bridal%20Hairstyle" target="_blank">Book Now</a>
+        </div>
+      </div>
+      <div class="sc fu">
+        <div class="sc-img">
+          <img src="https://i.pinimg.com/736x/03/40/10/03401032d73ed12c32233b7d2d9d87f2.jpg" alt="Cornrows"/>
+          <span class="sc-img-badge">✦ Cornrows</span>
+        </div>
+        <div class="sc-icon">✦</div>
+        <div class="sc-name">Cornrows</div>
+        <div class="sc-desc">Classic or creative cornrow patterns with neat, precise partings. Clean, protective, and built to last weeks without fuss — suitable for all hair types.</div>
+        <div class="sc-foot">
+          <div class="sc-price">From <b>₦5,000</b></div>
+          <a class="bbtn" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20Cornrows" target="_blank">Book Now</a>
+        </div>
+      </div>
+      <div class="sc fu">
+        <div class="sc-img">
+          <img src="https://i.pinimg.com/1200x/94/53/34/94533431770e541c7247343faf466389.jpg" alt="Relocking of Dreads"/>
+          <span class="sc-img-badge">🔒 Dreads</span>
+        </div>
+        <div class="sc-icon">🔒</div>
+        <div class="sc-name">Relocking of Dreads</div>
+        <div class="sc-desc">Keep your locs fresh, neat and thriving. Expert relocking that maintains your dread's shape, health, and neatness — done with care and the right technique.</div>
+        <div class="sc-foot">
+          <div class="sc-price">From <b>₦25,000</b></div>
+          <a class="bbtn" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20Dread%20Relocking" target="_blank">Book Now</a>
+        </div>
+      </div>
+      <div class="sc fu">
+        <div class="sc-img">
+          <img src="https://i.pinimg.com/1200x/be/c9/61/bec96148f1d39e0f0b5755d21cbf4fbc.jpg" alt="Frontal Installation"/>
+          <span class="sc-img-badge">👑 Frontal</span>
+        </div>
+        <div class="sc-icon">👑</div>
+        <div class="sc-name">Frontal Installation</div>
+        <div class="sc-desc">Seamless lace frontal installs for that undetectable, natural hairline. Glue-free or lace-down options — clean edges and a flawless finish every time.</div>
+        <div class="sc-foot">
+          <div class="sc-price">From <b>₦45,000</b></div>
+          <a class="bbtn" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20Frontal%20Installation" target="_blank">Book Now</a>
+        </div>
+      </div>
+      <div class="sc fu" style="background:linear-gradient(135deg,var(--pink4),#fff0f9);border-color:rgba(224,92,138,0.2);">
+        <div class="sc-img">
+          <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80&fit=crop&crop=top" alt="Hair Training"/>
+          <span class="sc-img-badge">🎓 Training</span>
+        </div>
+        <div class="sc-icon">🎓</div>
+        <div class="sc-name">Training</div>
+        <div class="sc-desc">Want to become a professional hairstylist? Learn directly from Blaze. Hands-on, practical training covering braids, frontal installs, cornrows and more — in Lagos.</div>
+        <div class="sc-foot">
+          <div class="sc-price">Enquire for <b>pricing</b></div>
+          <a class="bbtn" href="https://wa.me/2348134122076?text=Hi!%20I'm%20interested%20in%20Hair%20Training" target="_blank">Enquire Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section id="why">
+  <div class="wrap">
+    <div class="sh">
+      <p class="sl">Why Clients Love Us</p>
+      <h2 class="st">Why Choose Hairstylist_Blaze</h2>
+      <div class="bar"></div>
+      <p class="ss">We take the stress out of getting beautiful hair. Here's what sets us apart from the rest.</p>
+    </div>
+    <div class="why-wrap">
+      <div class="why-star">
+        <div class="ws-num">4.9</div>
+        <div class="ws-stars">★★★★★</div>
+        <div class="ws-label">Google Rating<br/>by multiple clients</div>
+      </div>
+      <div class="wgrid">
+        <div class="wc fu"><div class="wc-icon">✨</div><div class="wc-t">Neat Finishing</div><div class="wc-d">Clean edges, precise partings and a look that genuinely turns heads.</div></div>
+        <div class="wc fu"><div class="wc-icon">💰</div><div class="wc-t">Affordable</div><div class="wc-d">Premium quality at fair, competitive prices. No surprises.</div></div>
+        <div class="wc fu"><div class="wc-icon">💍</div><div class="wc-t">Bridal Specialist</div><div class="wc-d">Stunning styles for brides and birthday queens — every detail perfect.</div></div>
+        <div class="wc fu"><div class="wc-icon">⏱️</div><div class="wc-t">Always On Time</div><div class="wc-d">We respect your schedule — appointments run on time, always.</div></div>
+        <div class="wc fu"><div class="wc-icon">🌿</div><div class="wc-t">Hair-Safe Products</div><div class="wc-d">Quality products that protect and nourish your natural hair.</div></div>
+        <div class="wc fu"><div class="wc-icon">🎓</div><div class="wc-t">Training Offered</div><div class="wc-d">Learn the craft from a pro — hands-on hairstyling training in Lagos.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <div class="wrap">
+    <div class="sh">
+      <p class="sl">Our Work</p>
+      <h2 class="st">Styles We've Done</h2>
+      <div class="bar"></div>
+      <p class="ss">Real styles, real clients. The quality speaks for itself.</p>
+    </div>
+    <div class="gg">
+      <div class="gi"><img src="https://i.pinimg.com/1200x/08/91/c5/0891c59c01a8cb1f43f7d9119d11c487.jpg" alt="Braids" loading="lazy"/><div class="gi-ov"><span class="gi-lbl">Braids</span></div></div>
+      <div class="gi"><img src="https://i.pinimg.com/1200x/be/c9/61/bec96148f1d39e0f0b5755d21cbf4fbc.jpg" alt="Frontal Installation" loading="lazy"/><div class="gi-ov"><span class="gi-lbl">Frontal Installation</span></div></div>
+      <div class="gi"><img src="images/Classy+Sassy ✨.jpg" alt="Bridal Hairstyle" loading="lazy"/><div class="gi-ov"><span class="gi-lbl">Bridal Hairstyle</span></div></div>
+      <div class="gi"><img src="https://i.pinimg.com/736x/03/40/10/03401032d73ed12c32233b7d2d9d87f2.jpg" alt="Cornrows" loading="lazy"/><div class="gi-ov"><span class="gi-lbl">Cornrows</span></div></div>
+      <div class="gi"><img src="https://images.unsplash.com/photo-1562322140-8baeececf3df?w=600&q=80&fit=crop" alt="Relocking of Dreads" loading="lazy"/><div class="gi-ov"><span class="gi-lbl">Relocking of Dreads</span></div></div>
+      <div class="gi"><img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?w=600&q=80&fit=crop" alt="Training Session" loading="lazy"/><div class="gi-ov"><span class="gi-lbl">Training Session</span></div></div>
+    </div>
+    <p class="gal-note">📲 See more on <a href="#">Instagram → @hairstylist_blaze</a></p>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="wrap">
+    <div class="sh">
+      <p class="sl">Client Reviews</p>
+      <h2 class="st">What Our Clients Say</h2>
+      <div class="bar"></div>
+      <p class="ss">Straight from the mouths of happy clients.</p>
+    </div>
+    <div class="tgrid">
+      <div class="tc fu">
+        <div class="tc-q">"</div>
+        <p class="tc-txt">Honestly, I've been to so many salons in Abule Egba and none of them touch Blaze's finishing. My knotless braids lasted over 6 weeks and the parting was still clean. She truly knows her work!</p>
+        <div class="tc-foot"><div class="tc-av">A</div><div><div class="tc-name">Adaeze O.</div><div class="tc-loc">Abule Egba, Lagos</div></div><div class="tc-stars">★★★★★</div></div>
+      </div>
+      <div class="tc fu">
+        <div class="tc-q">"</div>
+        <p class="tc-txt">I was nervous to try someone new for my wig install but she delivered! It looked so natural, my coworkers didn't even know. Very professional and finished on time. I'll definitely be back!</p>
+        <div class="tc-foot"><div class="tc-av">F</div><div><div class="tc-name">Folake B.</div><div class="tc-loc">Ojokoro, Lagos</div></div><div class="tc-stars">★★★★★</div></div>
+      </div>
+      <div class="tc fu">
+        <div class="tc-q">"</div>
+        <p class="tc-txt">The home service is a total game-changer! She came to my house, set up everything neatly, and did my cornrows perfectly. Price was very fair too. This is my permanent stylist now 😄</p>
+        <div class="tc-foot"><div class="tc-av">C</div><div><div class="tc-name">Chisom N.</div><div class="tc-loc">Ijaiye, Lagos</div></div><div class="tc-stars">★★★★★</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location">
+  <div class="wrap">
+    <div class="sh">
+      <p class="sl">Find Us</p>
+      <h2 class="st">Visit Our Salon</h2>
+      <div class="bar"></div>
+      <p class="ss">Conveniently located in the heart of Abule Egba, Lagos.</p>
+    </div>
+    <div class="loc-grid">
+      <div class="loc-map" style="padding:0;background:none;border:none;">
+        <iframe
+          src="https://www.google.com/maps?q=37+Onifade+Crescent,+Poposhola,+Abule+Egba,+Lagos,+Nigeria&output=embed"
+          width="100%" height="100%" style="border:0;border-radius:16px;min-height:260px;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div>
+        <div class="litems">
+          <div class="li"><div class="li-icon">📍</div><div><div class="li-label">Address</div><div class="li-val">37 Onifade Crescent, Poposhola<br/>Abule Egba Ojokoro, Lagos, Nigeria</div></div></div>
+          <div class="li"><div class="li-icon">⏰</div><div><div class="li-label">Working Hours</div><div class="li-val">Monday – Saturday: 8:00am – 7:00pm<br/>Sunday: By appointment only</div></div></div>
+          <div class="li"><div class="li-icon">💬</div><div><div class="li-label">WhatsApp Booking</div><div class="li-val"><a href="https://wa.me/2348134122076">+234 813 412 2076</a><br/>Quick reply · Instant booking</div></div></div>
+        </div>
+        <div class="seo-area"><b>Serving:</b> Abule Egba · Ojokoro · Ijaiye · Agbado · Meiran · Ifako-Ijaiye · Agege · Dopemu · Ayobo · Ipaja and surrounding areas in Lagos State, Nigeria.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section id="cta">
+  <div class="wrap cta-in">
+    <div class="cta-badge">Ready to Book?</div>
+    <h2 class="st">Get Your Hair Done<br/><em style="font-family:'Cormorant Garamond',serif;font-style:italic;">The Right Way.</em></h2>
+    <p class="cta-sub">Message us on WhatsApp right now and secure your slot. We're always ready to make you look your very best.</p>
+    <div class="cta-btns">
+      <a class="btn-cm" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20at%20Hairstylist_Blaze" target="_blank">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.12 1.523 5.847L.057 23.857c-.068.263.156.504.421.421l6.01-1.466A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.016-1.378l-.36-.213-3.726.908.929-3.622-.234-.374A9.818 9.818 0 0112 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.421-4.398 9.818-9.818 9.818z"/></svg>
+        Book on WhatsApp
+      </a>
+      <a class="btn-cs" href="#services">Explore Services</a>
+    </div>
+    <p class="cta-phone">Or call: <a href="tel:+2348134122076">+234 813 412 2076</a></p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="f-brand">Hairstylist<span>_Blaze</span></div>
+  <div class="f-tag">Professional Hairstylist · Abule Egba, Lagos</div>
+  <div class="f-links">
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#testimonials">Reviews</a>
+    <a href="#location">Location</a>
+  </div>
+  <div class="f-copy">© 2025 Hairstylist_Blaze. All rights reserved.</div>
+</footer>
+
+<!-- WHATSAPP FAB -->
+<a class="wa-fab" href="https://wa.me/2348134122076?text=Hi!%20I'd%20like%20to%20book%20an%20appointment" target="_blank" aria-label="WhatsApp">
+  <div class="wa-ring"></div>
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.126.556 4.12 1.523 5.847L.057 23.857c-.068.263.156.504.421.421l6.01-1.466A11.938 11.938 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.016-1.378l-.36-.213-3.726.908.929-3.622-.234-.374A9.818 9.818 0 0112 2.182c5.42 0 9.818 4.398 9.818 9.818 0 5.421-4.398 9.818-9.818 9.818z"/></svg>
+</a>
+
+<script>
+// SLIDESHOW
+const slides=document.querySelectorAll('.slide');
+const dotsEl=document.getElementById('dots');
+const scEl=document.getElementById('sc');
+let cur=0,timer;
+
+slides.forEach((_,i)=>{
+  const d=document.createElement('button');
+  d.className='sdot'+(i===0?' on':'');
+  d.setAttribute('aria-label','Slide '+(i+1));
+  d.onclick=()=>go(i);
+  dotsEl.appendChild(d);
+});
+
+function go(n){
+  slides[cur].classList.remove('active');
+  dotsEl.children[cur].classList.remove('on');
+  cur=(n+slides.length)%slides.length;
+  slides[cur].classList.add('active');
+  dotsEl.children[cur].classList.add('on');
+  scEl.textContent=String(cur+1).padStart(2,'0');
+  clearInterval(timer);
+  timer=setInterval(()=>go(cur+1),4800);
+}
+
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+
+// Touch swipe
+let tx=0;
+const hero=document.getElementById('home');
+hero.addEventListener('touchstart',e=>{tx=e.touches[0].clientX;},{passive:true});
+hero.addEventListener('touchend',e=>{
+  const d=tx-e.changedTouches[0].clientX;
+  if(Math.abs(d)>50)go(d>0?cur+1:cur-1);
+},{passive:true});
+
+timer=setInterval(()=>go(cur+1),4800);
+
+// NAV scroll
+window.addEventListener('scroll',()=>{
+  document.getElementById('nav').classList.toggle('scrolled',scrollY>40);
+},{passive:true});
+
+// Fade up on scroll
+const obs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
+},{threshold:0.1});
+document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
+
+// Section header animations
+const shObs=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');shObs.unobserve(e.target);}});
+},{threshold:0.2});
+document.querySelectorAll('.sh').forEach(el=>shObs.observe(el));
+
+// Floating petals
+(function(){
+  const container=document.getElementById('petals');
+  const count=14;
+  for(let i=0;i<count;i++){
+    const p=document.createElement('div');
+    p.className='petal';
+    const size=Math.random()*14+8;
+    p.style.cssText=`
+      left:${Math.random()*100}%;
+      width:${size}px;height:${size}px;
+      animation-duration:${Math.random()*8+7}s;
+      animation-delay:${Math.random()*10}s;
+      opacity:${Math.random()*.4+.15};
+      border-radius:${Math.random()>0.5?'50% 0 50% 0':'0 50% 0 50%'};
+    `;
+    container.appendChild(p);
+  }
+})();
+
+// Hide scroll hint on scroll
+window.addEventListener('scroll',()=>{
+  const hint=document.querySelector('.scroll-hint');
+  if(hint)hint.style.opacity=scrollY>60?'0':'';
+},{passive:true,once:false});
+</script>
+</body>
+</html>
